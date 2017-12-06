@@ -1,0 +1,89 @@
+// bower:scss
+// endbower
+
+@import 'two';
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+}
+
+.horizontal-cell {
+  border: 1px solid darkturquoise;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+.horizontal-cell-shortcut {
+  border: 1px solid darkturquoise;
+  flex: auto; /* Same as 1 1 auto. */
+}
+
+.horizontal-container-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+
+$colorList: coral lightblue khaki pink lightgrey lightgreen;
+
+@function calc-width($value1, $value2) {
+  @return $value1 px + $value2 px / 1px;
+}
+
+@each $color in $colorList {
+  $i: index($colorList, $color);
+  .wrap-cell:nth-of-type(#{$i}) {
+    background-color: $color;
+    width: ((500px/$i) * 1);
+  }
+}
+
+
+.horizontal-container-grow {
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+
+  .grow-cell {
+    flex: 1;
+    border-right: 1px solid black;
+  }
+
+  .grow-cell:nth-of-type(2) {
+    flex: 2;
+  }
+}
+
+.horizontal-container-shrink {
+  display: flex;
+  flex-direction: row;
+  background-color: coral;
+
+  .shrink-cell {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    border-right: 1px solid black;
+  }
+
+  .shrink-cell:nth-of-type(2) {
+    flex-shrink: 3;
+  }
+}
+
