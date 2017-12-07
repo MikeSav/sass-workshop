@@ -39,13 +39,13 @@ img[alt=""], img:not([alt]) {
   padding: 20px 0 20px 30px;
   font-size: 12px;
   font-weight: 400;
-  color: #eee;
+  color: rgb(238,238,238);
   border-bottom: 1px solid rgb(34,34,34);
 }
 
 .sidebar ul li:hover {
   box-shadow: inset 5px 0 0 rgb(85,187,85), inset 6px 0 0 rgb(34,34,34);
-  background: #444;
+  background: rgb(68, 68, 68);
 }
 
 .sidebar ul li:nth-child(2):hover {
@@ -86,14 +86,14 @@ img[alt=""], img:not([alt]) {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 7px;
-  color: #eee;
+  color: rgb(238,238,238);
   border-bottom: 1px solid rgb(34,34,34);
   background: rgb(42,42,42);
 }
 
 .content {
   flex: 1;
-  background: #eee;
+  background: rgb(238,238,238);
   box-shadow: 0 0 5px rgba(0, 0, 0, 1);
   transform: translate3d(220px, 0, 0);
   transition: transform .3s;
