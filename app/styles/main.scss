@@ -2,20 +2,23 @@
 // endbower
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
 
+// import local files
+@import 'variables';
+
 html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: rgb(51,51,51);
+  background: $background;
 }
 
 body {
-  font: 600 12px/1 'Open Sans', sans-serif;
+  font: 600 $smallFont/1 'Open Sans', sans-serif;
 }
 
 /* You have forgotten the alt! */
 img[alt=""], img:not([alt]) {
-  border: 5px dashed rgb(204,0,0);
+  border: 5px dashed $warning;
 }
 
 .wrapper {
@@ -26,7 +29,7 @@ img[alt=""], img:not([alt]) {
 .sidebar {
   position: absolute;
   width: 220px;
-  color: rgb(255,255,255);
+  color: $white;
 }
 
 .sidebar ul {
@@ -37,63 +40,63 @@ img[alt=""], img:not([alt]) {
 .sidebar ul li {
   display: block;
   padding: 20px 0 20px 30px;
-  font-size: 12px;
+  font-size: $smallFont;
   font-weight: 400;
-  color: #eee;
-  border-bottom: 1px solid rgb(34,34,34);
+  color: $sideBarText;
+  border-bottom: 1px solid $sideBarBorder;
 }
 
 .sidebar ul li:hover {
-  box-shadow: inset 5px 0 0 rgb(85,187,85), inset 6px 0 0 rgb(34,34,34);
-  background: #444;
+  box-shadow: inset 5px 0 0 $sideBarHoverOne, inset 6px 0 0 $sideBarBorder;
+  background: $sideBarHoverBackground;
 }
 
 .sidebar ul li:nth-child(2):hover {
-  box-shadow: inset 5px 0 0 rgb(3, 169, 244), inset 6px 0 0 rgb(34,34,34);
+  box-shadow: inset 5px 0 0 $sideBarHoverTwo, inset 6px 0 0 $sideBarBorder;
 }
 
 .sidebar ul li:nth-child(3):hover {
-  box-shadow: inset 5px 0 0 rgb(0, 188, 212), inset 6px 0 0 rgb(34,34,34);
+  box-shadow: inset 5px 0 0 $sideBarHoverThree, inset 6px 0 0 $sideBarBorder;
 }
 
 .sidebar ul li:nth-child(4):hover {
-  box-shadow: inset 5px 0 0 rgb(139, 195, 74), inset 6px 0 0 rgb(34,34,34);
+  box-shadow: inset 5px 0 0 $sideBarHoverFour, inset 6px 0 0 $sideBarBorder;
 }
 .sidebar ul li:nth-child(5):hover {
-  box-shadow: inset 5px 0 0 rgb(205, 220, 57), inset 6px 0 0 rgb(34,34,34);
+  box-shadow: inset 5px 0 0 $sideBarHoverFive, inset 6px 0 0 $sideBarBorder;
 }
 .sidebar ul li:nth-child(6):hover {
-  box-shadow: inset 5px 0 0 rgb(255, 235, 59), inset 6px 0 0 rgb(34,34,34);
+  box-shadow: inset 5px 0 0 $sideBarHoverSix, inset 6px 0 0 $sideBarBorder;
 }
 .sidebar ul li:nth-child(7):hover {
-  box-shadow: inset 5px 0 0 rgb(255, 193, 7), inset 6px 0 0 rgb(34,34,34);
+  box-shadow: inset 5px 0 0 $sideBarHoverSeven, inset 6px 0 0 $sideBarBorder;
 }
 .sidebar ul li:nth-child(8):hover {
-  box-shadow: inset 5px 0 0 rgb(255, 87, 34), inset 6px 0 0 rgb(34,34,34);
+  box-shadow: inset 5px 0 0 $sideBarHoverEight, inset 6px 0 0 $sideBarBorder;
 }
 
 .sidebar ul li:nth-child(9):hover {
-  box-shadow: inset 5px 0 0 rgb(244, 67, 54), inset 6px 0 0 rgb(34,34,34);
+  box-shadow: inset 5px 0 0 $sideBarHoverNine, inset 6px 0 0 $sideBarBorder;
 }
 
 .sidebar ul li:nth-child(10):hover {
-  box-shadow: inset 5px 0 0 rgb(156, 39, 176), inset 6px 0 0 rgb(34,34,34);
+  box-shadow: inset 5px 0 0 $sideBarHoverTen, inset 6px 0 0 $sideBarBorder;
 }
 
 .sidebar-title {
-  font-size: 16px;
+  font-size: $mediumFont;
   line-height: 50px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 7px;
-  color: #eee;
-  border-bottom: 1px solid rgb(34,34,34);
+  color: $sideBarText;
+  border-bottom: 1px solid $sideBarBorder;
   background: rgb(42,42,42);
 }
 
 .content {
   flex: 1;
-  background: #eee;
+  background: $primaryBackground;
   box-shadow: 0 0 5px rgba(0, 0, 0, 1);
   transform: translate3d(220px, 0, 0);
   transition: transform .3s;
@@ -111,23 +114,23 @@ img[alt=""], img:not([alt]) {
 .content-header-cell {
   line-height: 50px;
   padding: 0 0 0 20px;
-  font-size: 26px;
-  background: rgb(85,187,85);
-  color: rgb(255,255,255);
-  border-bottom: 1px solid rgb(15,171,75);
+  font-size: $h1Font;
+  background: $headerBackground;
+  color: $white;
+  border-bottom: 1px solid $dashBoardBorder;
 }
 
 .content-header-cell:last-of-type {
   text-align: right;
   padding: 0 20px 0 0;
   flex-grow: 1;
-  font-size: 12px;
+  font-size: $smallFont;
 }
 
 .content-header-logo {
   vertical-align: middle;
   margin-left: 20px;
-  border: 1px solid rgb(255,255,255);
+  border: 1px solid $white;
 }
 
 .dashboard {
@@ -139,7 +142,7 @@ img[alt=""], img:not([alt]) {
 
 .dashboard-item {
   min-width: 300px;
-  border: 1px solid rgb(15,171,75);
+  border: 1px solid $dashBoardBorder;
   flex: 1 1 10px;
   width: 13%;
   margin-right: 20px;
@@ -147,10 +150,10 @@ img[alt=""], img:not([alt]) {
 }
 
 .dashboard-item-header {
-  background: rgb(85,187,85);
-  border-bottom: 1px solid rgb(15,171,75);
-  color: rgb(255,255,255);
-  font-size: 16px;
+  background: $headerBackground;
+  border-bottom: 1px solid $dashBoardBorder;
+  color: $white;
+  font-size: $mediumFont;
   font-weight: 400;
   padding: 10px;
 }
@@ -167,14 +170,14 @@ img[alt=""], img:not([alt]) {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
-  color: rgb(34,34,34);
+  color: $sideBarBorder;
   text-align: center;
 }
 
 .dashboard-text {
-  font-size: 14px;
+  font-size: $mediumFont;
 }
 
 .dashboard-warning {
-  color: rgb(204,0,0);
+  color: $warning;
 }
