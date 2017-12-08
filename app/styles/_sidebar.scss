@@ -14,50 +14,20 @@
       font-weight: 400;
       color: $sideBarText;
       border-bottom: 1px solid $sideBarBorder;
-
+      // we could remove this... but keep it as a default?
       &:hover {
         box-shadow: inset 5px 0 0 $sideBarHoverOne, inset 6px 0 0 $sideBarBorder;
         background: $sideBarHoverBackground;
       }
 
-      &:nth-child(2):hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverTwo, inset 6px 0 0 $sideBarBorder;
-      }
+      @each $color in $sideBarHoverList {
+        $i: index($sideBarHoverList, $color);
 
-      &:nth-child(3):hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverThree, inset 6px 0 0 $sideBarBorder;
+        &:nth-child(#{$i}):hover {
+          box-shadow: inset 5px 0 0 $color, inset 6px 0 0 $sideBarBorder;
+        }
       }
-
-      &:nth-child(4):hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverFour, inset 6px 0 0 $sideBarBorder;
-      }
-
-      &:nth-child(5):hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverFive, inset 6px 0 0 $sideBarBorder;
-      }
-
-      &:nth-child(6):hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverSix, inset 6px 0 0 $sideBarBorder;
-      }
-
-      &:nth-child(7):hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverSeven, inset 6px 0 0 $sideBarBorder;
-      }
-
-      &:nth-child(8):hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverEight, inset 6px 0 0 $sideBarBorder;
-      }
-
-      &:nth-child(9):hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverNine, inset 6px 0 0 $sideBarBorder;
-      }
-
-      &:nth-child(10):hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverTen, inset 6px 0 0 $sideBarBorder;
-      }
-
     }
-
   }
 
   .sidebar-title {

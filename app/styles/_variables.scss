@@ -26,6 +26,10 @@ $sideBarBorder: rgb(34,34,34);
 $sideBarText: rgb(238,238,238);
 $sideBarHoverBackground: rgb(68,68,68);
 
+$sideBarHoverList: $sideBarHoverOne $sideBarHoverTwo $sideBarHoverThree
+$sideBarHoverFour $sideBarHoverFive $sideBarHoverSix $sideBarHoverSeven
+$sideBarHoverEight $sideBarHoverNine $sideBarHoverTen;
+
 $warning: rgb(204,0,0);
 
 // font sizes
@@ -35,4 +39,3 @@ $h1Font: 26px;
 
 // default text
 $defaultFont: 600 $smallFont/1 'Open Sans', sans-serif;
-
