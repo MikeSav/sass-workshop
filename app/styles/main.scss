@@ -34,6 +34,10 @@ img[alt=""], img:not([alt]) {
   transform: translate3d(220px, 0, 0);
   transition: transform .3s;
 
+  &.content-closed {
+    transform: translate3d(0, 0, 0);
+  }
+
   .content-header {
     display: flex;
     flex-direction: row;
@@ -60,8 +64,4 @@ img[alt=""], img:not([alt]) {
       }
     }
   }
-}
-
-.content-closed {
-  transform: translate3d(0, 0, 0);
 }
