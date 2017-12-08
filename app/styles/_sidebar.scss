@@ -1,0 +1,73 @@
+.sidebar {
+  position: absolute;
+  width: 220px;
+  color: $white;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      padding: 20px 0 20px 30px;
+      font-size: $smallFont;
+      font-weight: 400;
+      color: $sideBarText;
+      border-bottom: 1px solid $sideBarBorder;
+
+      &:hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverOne, inset 6px 0 0 $sideBarBorder;
+        background: $sideBarHoverBackground;
+      }
+
+      &:nth-child(2):hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverTwo, inset 6px 0 0 $sideBarBorder;
+      }
+
+      &:nth-child(3):hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverThree, inset 6px 0 0 $sideBarBorder;
+      }
+
+      &:nth-child(4):hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverFour, inset 6px 0 0 $sideBarBorder;
+      }
+
+      &:nth-child(5):hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverFive, inset 6px 0 0 $sideBarBorder;
+      }
+
+      &:nth-child(6):hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverSix, inset 6px 0 0 $sideBarBorder;
+      }
+
+      &:nth-child(7):hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverSeven, inset 6px 0 0 $sideBarBorder;
+      }
+
+      &:nth-child(8):hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverEight, inset 6px 0 0 $sideBarBorder;
+      }
+
+      &:nth-child(9):hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverNine, inset 6px 0 0 $sideBarBorder;
+      }
+
+      &:nth-child(10):hover {
+        box-shadow: inset 5px 0 0 $sideBarHoverTen, inset 6px 0 0 $sideBarBorder;
+      }
+
+    }
+
+  }
+
+  .sidebar-title {
+    font-size: $mediumFont;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: $sideBarText;
+    border-bottom: 1px solid $sideBarBorder;
+    background: rgb(42, 42, 42);
+  }
+}

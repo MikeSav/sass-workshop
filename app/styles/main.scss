@@ -1,9 +1,10 @@
 // bower:scss
 // endbower
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
-
 // import local files
 @import 'variables';
+@import '_sidebar';
+@import '_dashboard';
 
 html, body {
   height: 100vh;
@@ -13,7 +14,7 @@ html, body {
 }
 
 body {
-  font: 600 $smallFont/1 'Open Sans', sans-serif;
+  font: $defaultFont;
 }
 
 /* You have forgotten the alt! */
@@ -26,158 +27,41 @@ img[alt=""], img:not([alt]) {
   min-height: 100%;
 }
 
-.sidebar {
-  position: absolute;
-  width: 220px;
-  color: $white;
-}
-
-.sidebar ul {
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar ul li {
-  display: block;
-  padding: 20px 0 20px 30px;
-  font-size: $smallFont;
-  font-weight: 400;
-  color: $sideBarText;
-  border-bottom: 1px solid $sideBarBorder;
-}
-
-.sidebar ul li:hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverOne, inset 6px 0 0 $sideBarBorder;
-  background: $sideBarHoverBackground;
-}
-
-.sidebar ul li:nth-child(2):hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverTwo, inset 6px 0 0 $sideBarBorder;
-}
-
-.sidebar ul li:nth-child(3):hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverThree, inset 6px 0 0 $sideBarBorder;
-}
-
-.sidebar ul li:nth-child(4):hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverFour, inset 6px 0 0 $sideBarBorder;
-}
-.sidebar ul li:nth-child(5):hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverFive, inset 6px 0 0 $sideBarBorder;
-}
-.sidebar ul li:nth-child(6):hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverSix, inset 6px 0 0 $sideBarBorder;
-}
-.sidebar ul li:nth-child(7):hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverSeven, inset 6px 0 0 $sideBarBorder;
-}
-.sidebar ul li:nth-child(8):hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverEight, inset 6px 0 0 $sideBarBorder;
-}
-
-.sidebar ul li:nth-child(9):hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverNine, inset 6px 0 0 $sideBarBorder;
-}
-
-.sidebar ul li:nth-child(10):hover {
-  box-shadow: inset 5px 0 0 $sideBarHoverTen, inset 6px 0 0 $sideBarBorder;
-}
-
-.sidebar-title {
-  font-size: $mediumFont;
-  line-height: 50px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  color: $sideBarText;
-  border-bottom: 1px solid $sideBarBorder;
-  background: rgb(42,42,42);
-}
-
 .content {
   flex: 1;
   background: $primaryBackground;
   box-shadow: 0 0 5px rgba(0, 0, 0, 1);
   transform: translate3d(220px, 0, 0);
   transition: transform .3s;
+
+  .content-header {
+    display: flex;
+    flex-direction: row;
+
+    .content-header-logo {
+      vertical-align: middle;
+      margin-left: 20px;
+      border: 1px solid $white;
+    }
+
+    .content-header-cell {
+      line-height: 50px;
+      padding: 0 0 0 20px;
+      font-size: $h1Font;
+      background: $headerBackground;
+      color: $white;
+      border-bottom: 1px solid $dashBoardBorder;
+
+      &:last-of-type {
+        text-align: right;
+        padding: 0 20px 0 0;
+        flex-grow: 1;
+        font-size: $smallFont;
+      }
+    }
+  }
 }
 
 .content-closed {
   transform: translate3d(0, 0, 0);
-}
-
-.content-header {
-  display: flex;
-  flex-direction: row;
-}
-
-.content-header-cell {
-  line-height: 50px;
-  padding: 0 0 0 20px;
-  font-size: $h1Font;
-  background: $headerBackground;
-  color: $white;
-  border-bottom: 1px solid $dashBoardBorder;
-}
-
-.content-header-cell:last-of-type {
-  text-align: right;
-  padding: 0 20px 0 0;
-  flex-grow: 1;
-  font-size: $smallFont;
-}
-
-.content-header-logo {
-  vertical-align: middle;
-  margin-left: 20px;
-  border: 1px solid $white;
-}
-
-.dashboard {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 20px;
-}
-
-.dashboard-item {
-  min-width: 300px;
-  border: 1px solid $dashBoardBorder;
-  flex: 1 1 10px;
-  width: 13%;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.dashboard-item-header {
-  background: $headerBackground;
-  border-bottom: 1px solid $dashBoardBorder;
-  color: $white;
-  font-size: $mediumFont;
-  font-weight: 400;
-  padding: 10px;
-}
-
-.dashboard-item-content {
-  height: 200px;
-  display: flex;
-  align-items: center;
-}
-
-.dashboard-figure {
-  font-size: 100px;
-  font-weight: 600;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  color: $sideBarBorder;
-  text-align: center;
-}
-
-.dashboard-text {
-  font-size: $mediumFont;
-}
-
-.dashboard-warning {
-  color: $warning;
 }
