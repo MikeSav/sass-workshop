@@ -13,7 +13,7 @@
     margin-bottom: 20px;
 
     .dashboard-item-header {
-      background: $headerBackground;
+      background: linear-gradient($dashBoardBorder, $headerBackground);
       border-bottom: 1px solid $dashBoardBorder;
       color: $white;
       font-size: $mediumFont;
