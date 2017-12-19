@@ -1,0 +1,47 @@
+@mixin borderRadius($radius:$borderRadius) {
+  border-radius: $radius;
+}
+
+@mixin links($link, $visited, $hover, $active) {
+  & {
+    color: $link;
+    text-decoration: underline;
+
+    &:visited {
+      color: $visited;
+    }
+
+    &:hover {
+      color: $hover;
+      text-decoration: none;
+    }
+
+    &:active, &:focus {
+      color: $active;
+    }
+  }
+}
+
+@mixin overlay($modalBg:$modalBgPrimary) {
+  &:before {
+    content: "";
+    display: none;
+    background: $modalBg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  &:target {
+    &:before {
+      display: block;
+    }
+
+    .modal-dialog {
+      top: 20%;
+    }
+  }
+}

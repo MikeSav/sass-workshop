@@ -12,6 +12,7 @@ $headerBackground: rgb(85, 187, 85);
 $dashBoardBorder: rgb(15, 171, 75);
 $primaryBackground: rgb(238, 238, 238);
 
+$sideBarBg: rgb(42, 42, 42);
 $sideBarHoverOne: $msaGreen;
 $sideBarHoverTwo: rgb(3, 169, 244);
 $sideBarHoverThree: rgb(0, 188, 212);
@@ -29,18 +30,41 @@ $sideBarHoverBackground: rgb(68, 68, 68);
 $sideBarHoverList: $sideBarHoverOne $sideBarHoverTwo $sideBarHoverThree $sideBarHoverFour
 $sideBarHoverFive $sideBarHoverSix $sideBarHoverSeven $sideBarHoverEight $sideBarHoverNine $sideBarHoverTen;
 
+// dashboard
+$dashBoardLink: rgb(15, 171, 75);
+$dashBoardLinkHover: rgb(85, 187, 85);
+$dashBoardLinkActive: rgb(0, 126, 42);
 
-$newsHeader: #ffc107;
-$newsHeaderBorder: #ff9800;
-// Starting color for news items
-$newsItemColour: #212121;
 
+
+// news
+$newsHeader: rgb(255,193,7);
+$newsHeaderBorder: rgb(255,152,0);
+// starting color for news items
+$newsItemColour: rgb(33,33,33);
 $warning: rgb(204, 0, 0);
+
+// modals
+$modalBorder: rgb(186, 186, 186);
+$modalBgPrimary: rgba(0, 0, 0, .6);
 
 // font sizes
 $smallFont: 12px;
 $mediumFont: 16px;
 $h1Font: 26px;
+
+// borders
+$borderRadius: 5px;
+
+// padding & margin
+$paddingS: 10px;
+$paddingM: 20px;
+
+$marginS: 10px;
+$marginM: 20px;
+
+// buttons
+$btnPrimary: rgb(66,139,202);
 
 // default text
 $defaultFont: 600 $smallFont/1 'Open Sans', sans-serif;
