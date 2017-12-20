@@ -22,66 +22,12 @@
   }
 }
 
-// ToDo... add some left / right / up / down logic...
-@mixin overlay($modalBg, $modalHeaderColor, $modalHeaderBg1, $modalHeaderBg2, $startPosX, $startPosY) {
-  &:before {
-    content: "";
-    display: none;
-    background: $modalBg;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-  }
-
-  &:target {
-    &:before {
-      display: block;
-    }
-
-    .modal-dialog {
-      transform: translate(0, 0);
-      top: 20%;
-    }
-  }
-
-  .modal-dialog {
-    background: $white;
-    border: 1px solid $white;
-    border-radius: 5px;
-    margin-left: -200px;
-    position: fixed;
-    left: 50%;
-    top: -100%;
-    z-index: 11;
-    width: 360px;
-    transform: translate($startPosX, $startPosY);
-    transition: transform 0.3s ease-out;
-
-    .modal-header {
-      border-bottom: 1px solid $modalBorder;
-      padding: $paddingS $paddingM;
-      font-size: 20px;
-      background: linear-gradient($modalHeaderBg1, $modalHeaderBg2);
-      border-top-left-radius: $borderRadius;
-      border-top-right-radius: $borderRadius;
-      color: $modalHeaderColor;
-    }
-
-    .modal-body {
-      padding: $paddingM;
-      font-size: $mediumFont;
-      font-weight: 400;
-    }
-
-    .modal-footer {
-      border-top: 1px solid $modalBorder;
-      padding: $paddingS $paddingM;
-      text-align: right;
-    }
-  }
-
+// I want to potentially change:
+// the Modal Background Colour - $modalBg,
+// the Modal Header Text Colour -  $modalHeaderColor,
+// The Modal Header Background Colour... perhaps I want a gradient? $modalHeaderBg1, $modalHeaderBg2,
+// I'd like to be able to animate how the modal window enters the page - $startPosX, $startPosY
+// ToDo... add some left / right / up / down logic so simplify the logic
+@mixin overlay() {
 
 }
