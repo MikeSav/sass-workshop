@@ -29,6 +29,7 @@ img[alt=""], img:not([alt]) {
   color: rgb(255,255,255);
 }
 
+/* notice how I target the HTML rather than a class name... I don't like that */
 .sidebar ul {
   margin: 0;
   padding: 0;
