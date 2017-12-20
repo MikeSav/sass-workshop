@@ -22,7 +22,6 @@
   }
 }
 
-
 @mixin overlay($modalBg, $modalHeaderColor, $modalHeaderBg1, $modalHeaderBg2, $startPosX, $startPosY) {
   &:before {
     content: "";
@@ -82,6 +81,4 @@
       text-align: right;
     }
   }
-
-
 }
