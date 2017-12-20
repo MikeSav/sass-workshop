@@ -1,0 +1,12 @@
+@for $i from 1 through 5 {
+        // ere we use the lighten built in function - lighten($color, $amount)
+        // but we could use other, like darken or saturate or desaturate or invert...
+        // http://sass-lang.com/documentation/Sass/Script/Functions.html
+        // http://jackiebalzer.com/color
+
+        $newsItemColour: lighten($newsItemColour, 15%);
+
+        &:nth-child(#{$i}) {
+          color: $newsItemColour;
+        }
+      }
