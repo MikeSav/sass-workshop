@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   margin: $marginM;
 
-  .news-header {
+  &-header {
     flex: 1 1 10px;
     background: linear-gradient($newsHeaderBorder, $newsHeader);
     border: 1px solid $newsHeaderBorder;
@@ -29,12 +29,12 @@
     }
   }
 
-  .news-headline-list {
+  &-headline-list {
     list-style-type: none;
     padding-left: $paddingM;
   }
 
-  .news-headlines {
+  &-headlines {
     flex: 1 1 10px;
     background: $white;
     max-height: 0;
@@ -46,11 +46,11 @@
     border-bottom-right-radius: $borderRadius;
   }
 
-  .news-headline {
+  &-headline {
     padding: $paddingXS 0;
   }
 
-  .news-link {
+  &-link {
     @include links($newsLink, $newsLink, $newsLinkHover, $newsLinkActive);
   }
 }

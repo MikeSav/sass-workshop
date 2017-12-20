@@ -6,7 +6,7 @@
   position: absolute;
   bottom: 0;
 
-  .footer-link {
+  &-link {
     @include links($primaryLink, $primaryLink, $primaryHover, $primaryActive);
   }
 }

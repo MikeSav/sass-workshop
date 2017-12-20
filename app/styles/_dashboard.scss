@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   margin-left: $marginM;
 
-  .dashboard-item {
+  &-item {
     min-width: 300px;
     border: 1px solid $dashBoardBorder;
     flex: 1 1 10px;
@@ -14,7 +14,7 @@
 
     @include borderRadius();
 
-    .dashboard-item-header {
+    &-header {
       background: linear-gradient($dashBoardBorder, $headerBackground);
       border-bottom: 1px solid $dashBoardBorder;
       color: $white;
@@ -23,7 +23,7 @@
       padding: $paddingS;
     }
 
-    .dashboard-item-content {
+    &-content {
       height: 200px;
       display: flex;
       align-items: center;

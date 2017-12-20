@@ -9,17 +9,17 @@
     transform: translate3d(0, 0, 0);
   }
 
-  .content-header {
+  &-header {
     display: flex;
     flex-direction: row;
 
-    .content-header-logo {
+    &-logo {
       vertical-align: middle;
       margin-left: $marginM;
       border: 1px solid $white;
     }
 
-    .content-header-cell {
+    &-cell {
       line-height: 50px;
       padding: 0 0 0 $paddingM;
       font-size: $h1Font;
