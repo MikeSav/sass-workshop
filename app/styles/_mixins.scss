@@ -22,7 +22,8 @@
   }
 }
 
-@mixin overlay($modalBg:$modalBgPrimary) {
+
+@mixin overlay($modalBg, $modalHeaderBg1, $modalHeaderBg2, $startPosX, $startPosY) {
   &:before {
     content: "";
     display: none;
@@ -41,7 +42,43 @@
     }
 
     .modal-dialog {
+      transform: translate(0, 0);
       top: 20%;
     }
   }
+
+  .modal-dialog {
+    background: $white;
+    border: 1px solid $white;
+    border-radius: 5px;
+    margin-left: -200px;
+    position: fixed;
+    left: 50%;
+    top: -100%;
+    z-index: 11;
+    width: 360px;
+    transform: translate($startPosX, $startPosY);
+    transition: transform 0.3s ease-out;
+
+    .modal-header {
+      border-bottom: 1px solid $modalBorder;
+      padding: $paddingS $paddingM;
+      font-size: 20px;
+      background: linear-gradient($modalHeaderBg1, $modalHeaderBg2);
+    }
+
+    .modal-body {
+      padding: $paddingM;
+      font-size: $mediumFont;
+      font-weight: 400;
+    }
+
+    .modal-footer {
+      border-top: 1px solid $modalBorder;
+      padding: $paddingS $paddingM;
+      text-align: right;
+    }
+  }
+
+
 }

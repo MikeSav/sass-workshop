@@ -1,0 +1,12 @@
+.footer {
+  padding: $paddingM;
+  font-size: $smallFont;
+  font-weight: 400;
+  // should really use flex but hey?
+  position: absolute;
+  bottom: 0;
+
+  .footer-link {
+    @include links($primaryLink, $primaryLink, $primaryHover, $primaryActive);
+  }
+}

@@ -29,6 +29,11 @@
     }
   }
 
+  .news-headline-list {
+    list-style-type: none;
+    padding-left: $paddingM;
+  }
+
   .news-headlines {
     flex: 1 1 10px;
     background: $white;
@@ -37,10 +42,14 @@
     overflow: hidden;
     color: black;
     margin-top: $paddingS;
+  }
 
-    .news-headline {
+  .news-headline {
+    padding: $paddingXS 0;
+  }
 
-    }
+  .news-link {
+    @include links($newsLink, $newsLink, $newsLinkHover, $newsLinkActive);
   }
 }
 

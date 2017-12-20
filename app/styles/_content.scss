@@ -15,13 +15,13 @@
 
     .content-header-logo {
       vertical-align: middle;
-      margin-left: 20px;
+      margin-left: $marginM;
       border: 1px solid $white;
     }
 
     .content-header-cell {
       line-height: 50px;
-      padding: 0 0 0 20px;
+      padding: 0 0 0 $paddingM;
       font-size: $h1Font;
       background: linear-gradient($dashBoardBorder, $headerBackground);
       color: $white;
@@ -29,7 +29,7 @@
 
       &:last-of-type {
         text-align: right;
-        padding: 0 20px 0 0;
+        padding: 0 $paddingM 0 0;
         flex-grow: 1;
         font-size: $smallFont;
       }

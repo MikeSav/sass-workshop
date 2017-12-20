@@ -1,29 +1,11 @@
 .modal-default {
-  @include overlay($modalBgPrimary);
+  @include overlay($modalBgPrimary, $white, $white, 0, -500%);
 }
 
-.modal-dialog {
-  background: $white;
-  border: 1px solid $white;
-  border-radius: 5px;
-  margin-left: -200px;
-  position: fixed;
-  left: 50%;
-  top: -100%;
-  z-index: 11;
-  width: 360px;
+.modal-dashboard {
+  @include overlay($modalBgPrimary, $white, $white, 500%, 0);
+}
 
-  .modal-header {
-    border-bottom: 1px solid $modalBorder;
-    padding: $paddingS $paddingM;
-  }
-
-  .modal-body {
-    padding: $paddingM;
-  }
-
-  .modal-footer {
-    border-top: 1px solid $modalBorder;
-    padding: $paddingS $paddingM;
-  }
+.modal-news {
+  @include overlay($modalBgPrimary, $white, $white, -500%, 0);
 }

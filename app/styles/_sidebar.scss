@@ -9,7 +9,7 @@
 
     li {
       display: block;
-      padding: 20px 0 20px 30px;
+      padding: $paddingM 0 $paddingM $paddingL;
       font-size: $smallFont;
       font-weight: 400;
       color: $sideBarText;

@@ -9,8 +9,8 @@
     border: 1px solid $dashBoardBorder;
     flex: 1 1 10px;
     width: 13%;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: $marginM;
+    margin-bottom: $marginM;
 
     @include borderRadius();
 
