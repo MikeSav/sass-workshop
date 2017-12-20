@@ -23,7 +23,7 @@
 }
 
 
-@mixin overlay($modalBg, $modalHeaderBg1, $modalHeaderBg2, $startPosX, $startPosY) {
+@mixin overlay($modalBg, $modalHeaderColor, $modalHeaderBg1, $modalHeaderBg2, $startPosX, $startPosY) {
   &:before {
     content: "";
     display: none;
@@ -65,6 +65,9 @@
       padding: $paddingS $paddingM;
       font-size: 20px;
       background: linear-gradient($modalHeaderBg1, $modalHeaderBg2);
+      border-top-left-radius: $borderRadius;
+      border-top-right-radius: $borderRadius;
+      color: $modalHeaderColor;
     }
 
     .modal-body {

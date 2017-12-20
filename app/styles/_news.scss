@@ -42,6 +42,8 @@
     overflow: hidden;
     color: black;
     margin-top: $paddingS;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
   }
 
   .news-headline {
