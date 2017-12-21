@@ -32,3 +32,70 @@ img[alt=""], img:not([alt]) {
   display: flex;
   min-height: 100%;
 }
+
+/* @extend is awful */
+.fancy-text {
+  color: #c09;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.fancy-label {
+  @extend .fancy-text;
+  cursor: pointer;
+}
+
+/*
+ The above code should compile to the following... let's have a look at the compiled CSS
+
+.fancy-text, .fancy-label {
+  color: #c09;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.fancy-label {
+  cursor: pointer;
+}
+
+*/
+
+// now let's add some more rules / styles
+
+/*
+.header {
+  .fancy-text {
+    font-weight: bold;
+  }
+}
+
+.footer {
+  .fancy-text {
+    display: inline;
+  }
+}
+*/
+
+/* this should compile to
+
+.fancy-text, .fancy-label {
+  color: #c09;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.fancy-label {
+  cursor: pointer;
+}
+
+.header .fancy-text  {
+  font-weight: bold;
+}
+
+.footer .fancy-text  {
+  display: inline;
+}
+*/
+
+// let's have a look at the compiled CSS
+
