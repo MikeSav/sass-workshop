@@ -23,6 +23,23 @@
 }
 
 @mixin overlay($modalBg, $modalHeaderColor, $modalHeaderBg1, $modalHeaderBg2, $startPosX, $startPosY) {
+
+  // notice double equals
+  @if $startPosX == "right" {
+    $startPosX: 500%;
+  } @else if $startPosX == "left" {
+    $startPosX: -500%;
+  } @else if $startPosX == "center" {
+    $startPosX: 0;
+  }
+
+  @if $startPosY == "top" {
+    $startPosY: -500%;
+  } @else if $startPosY == "center" {
+    $startPosY: 0;
+  }
+
+
   &:before {
     content: "";
     display: none;
