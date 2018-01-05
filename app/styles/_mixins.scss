@@ -2,33 +2,21 @@
   border-radius: $radius;
 }
 
-@mixin links($link, $visited, $hover, $active) {
-  & {
-    color: $link;
-    text-decoration: underline;
 
-    &:visited {
-      color: $visited;
-    }
 
-    &:hover {
-      color: $hover;
-      text-decoration: none;
-    }
 
-    &:active, &:focus {
-      color: $active;
-    }
-  }
-}
+
+/*
 
 // I want to potentially change:
 // the Modal Background Colour - $modalBg,
 // the Modal Header Text Colour -  $modalHeaderColor,
 // The Modal Header Background Colour... perhaps I want a gradient? $modalHeaderBg1, $modalHeaderBg2,
 // I'd like to be able to animate how the modal window enters the page - $startPosX, $startPosY
-// ToDo... add some left / right / up / down logic so simplify the logic
+// ToDo... add some left / right / up / down logic to simplify the animation
 
 @mixin overlay() {
 
 }
+
+*/
