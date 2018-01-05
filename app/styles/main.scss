@@ -99,3 +99,19 @@ img[alt=""], img:not([alt]) {
 
 // let's have a look at the compiled CSS
 
+
+
+
+
+
+
+
+/*
+ Using @extend duplicates every instance of that selector.
+ Every time you add a new ruleset for .fancy-text, Sass will include .fancy-label as part of the selector chain.
+ It's very unlikely that you want to do this in your CSS. And it's why you should avoid @extend.
+ It introduces specificity and inheritance problems, and increases your file size.
+
+
+ */
+
