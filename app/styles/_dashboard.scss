@@ -54,5 +54,9 @@
 }
 
 /*
-  background: linear-gradient($dashBoardBorder, $headerBackground);
+  $parent: &; //  eqals - dashboard
+  #{$parent} - we need to interpolanate
+
+
+
 */
