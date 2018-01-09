@@ -29,7 +29,7 @@
       align-items: center;
 
       .dashboard-link {
-        @include links($dashBoardLink, $dashBoardLinkHover, $dashBoardLinkActive, $dashBoardLink);
+        // @include links($dashBoardLink, $dashBoardLinkHover, $dashBoardLinkActive, $dashBoardLink);
       }
 
       .dashboard-figure {
