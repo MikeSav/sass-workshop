@@ -1,12 +1,12 @@
 // notice that I pass a value for color, not a variable
-.modal-default {
+.modal--default {
   @include overlay($modalBgPrimary, #222222, $white, $white, center, top);
 }
 
-.modal-dashboard {
+.modal--dashboard {
   @include overlay($modalBgPrimary, $white, $dashBoardBorder, $headerBackground, right, center);
 }
 
-.modal-news {
+.modal--news {
   @include overlay($modalBgPrimary, $white, $newsHeaderBorder, $newsHeader, left, center);
 }

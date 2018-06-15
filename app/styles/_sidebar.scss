@@ -2,42 +2,43 @@
   position: absolute;
   width: 220px;
   color: $white;
+}
 
-  ul {
-    margin: 0;
-    padding: 0;
+.sidebar__title {
+  font-size: $mediumFont;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: $sideBarText;
+  border-bottom: 1px solid $sideBarBorder;
+  background: $sideBarBg;
+}
 
-    li {
-      display: block;
-      padding: $paddingM 0 $paddingM $paddingL;
-      font-size: $smallFont;
-      font-weight: 400;
-      color: $sideBarText;
-      border-bottom: 1px solid $sideBarBorder;
-      // we could remove this... but keep it as a default?
-      &:hover {
-        box-shadow: inset 5px 0 0 $sideBarHoverOne, inset 6px 0 0 $sideBarBorder;
-        background: $sideBarHoverBackground;
-      }
+.sidebar__nav {
+  margin: 0;
+  padding: 0;
+}
 
-      @each $color in $sideBarHoverList {
-        $i: index($sideBarHoverList, $color);
+.sidebar__nav-item {
+  display: block;
+  padding: $paddingM 0 $paddingM $paddingL;
+  font-size: $smallFont;
+  font-weight: 400;
+  color: $sideBarText;
+  border-bottom: 1px solid $sideBarBorder;
 
-        &:nth-child(#{$i}):hover {
-          box-shadow: inset 5px 0 0 $color, inset 6px 0 0 $sideBarBorder;
-        }
-      }
-    }
+  // we could remove this... but keep it as a default?
+  &:hover {
+    box-shadow: inset 5px 0 0 $sideBarHoverOne, inset 6px 0 0 $sideBarBorder;
+    background: $sideBarHoverBackground;
   }
 
-  .sidebar-title {
-    font-size: $mediumFont;
-    line-height: 50px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 7px;
-    color: $sideBarText;
-    border-bottom: 1px solid $sideBarBorder;
-    background: $sideBarBg;
+  @each $color in $sideBarHoverList {
+    $i: index($sideBarHoverList, $color);
+
+    &:nth-child(#{$i}):hover {
+      box-shadow: inset 5px 0 0 $color, inset 6px 0 0 $sideBarBorder;
+    }
   }
 }
