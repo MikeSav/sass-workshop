@@ -1,3 +1,4 @@
+/* In this example we see how to use BEM and Sass with nesting (the code is a little nicer) */
 .content {
   flex: 1;
   background: $primaryBackground;
@@ -8,31 +9,35 @@
   &.content--closed {
     transform: translate3d(0, 0, 0);
   }
-}
 
-.content__header {
-  display: flex;
-  flex-direction: row;
-}
+  &__header {
+    display: flex;
+    flex-direction: row;
 
-.content__header__logo {
-  vertical-align: middle;
-  margin-left: $marginM;
-  border: 1px solid $white;
-}
+    &__logo {
+      vertical-align: middle;
+      margin-left: $marginM;
+      border: 1px solid $white;
+    }
 
-.content__header__cell {
-  line-height: 50px;
-  padding: 0 0 0 $paddingM;
-  font-size: $h1Font;
-  background: linear-gradient($dashBoardBorder, $headerBackground);
-  color: $white;
-  border-bottom: 1px solid $dashBoardBorder;
+    &__cell {
+      line-height: 50px;
+      padding: 0 0 0 $paddingM;
+      font-size: $h1Font;
+      background: linear-gradient($dashBoardBorder, $headerBackground);
+      color: $white;
+      border-bottom: 1px solid $dashBoardBorder;
 
-  &:last-of-type {
-    text-align: right;
-    padding: 0 $paddingM 0 0;
-    flex-grow: 1;
-    font-size: $smallFont;
+      &:last-of-type {
+        text-align: right;
+        padding: 0 $paddingM 0 0;
+        flex-grow: 1;
+        font-size: $smallFont;
+      }
+    }
   }
 }
+
+
+
+

@@ -5,8 +5,8 @@
   // should really use flex but hey?
   position: absolute;
   bottom: 0;
-}
 
-.footer__link {
-  @include links($primaryLink, $primaryLink, $primaryHover, $primaryActive);
+  &__link {
+    @include links($primaryLink, $primaryLink, $primaryHover, $primaryActive);
+  }
 }

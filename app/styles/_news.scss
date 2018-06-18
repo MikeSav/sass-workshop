@@ -3,55 +3,55 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin: $marginM;
-}
 
-.news__header {
-  flex: 1 1 10px;
-  background: linear-gradient($newsHeaderBorder, $newsHeader);
-  border: 1px solid $newsHeaderBorder;
-  color: $white;
-  font-size: $mediumFont;
-  font-weight: 400;
-  padding-top: $paddingS;
+  &__header {
+    flex: 1 1 10px;
+    background: linear-gradient($newsHeaderBorder, $newsHeader);
+    border: 1px solid $newsHeaderBorder;
+    color: $white;
+    font-size: $mediumFont;
+    font-weight: 400;
+    padding-top: $paddingS;
 
-  @include borderRadius();
-  // ToDo remove tag ref
-  input[type=checkbox] {
-    display: none;
+    @include borderRadius();
+    // ToDo remove tag ref
+    input[type=checkbox] {
+      display: none;
+    }
+    // yes I know, I target the HTML...
+    input[type=checkbox] + label {
+      padding-left: $paddingM;
+    }
+
+    input[type=checkbox]:checked ~ .news__headlines {
+      max-height: 500px;
+      transition: max-height 0.45s ease;
+    }
   }
-  // yes I know, I target the HTML...
-  input[type=checkbox] + label {
+
+  &__headline-list {
+    list-style-type: none;
     padding-left: $paddingM;
   }
 
-  input[type=checkbox]:checked ~ .news__headlines {
-    max-height: 500px;
-    transition: max-height 0.45s ease;
+  &__headlines {
+    flex: 1 1 10px;
+    background: $white;
+    max-height: 0;
+    transition: max-height 0.15s ease;
+    overflow: hidden;
+    color: black;
+    margin-top: $paddingS;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
   }
-}
 
-.news__headline-list {
-  list-style-type: none;
-  padding-left: $paddingM;
-}
+  &__headline {
+    padding: $paddingXS 0;
+  }
 
-.news__headlines {
-  flex: 1 1 10px;
-  background: $white;
-  max-height: 0;
-  transition: max-height 0.15s ease;
-  overflow: hidden;
-  color: black;
-  margin-top: $paddingS;
-  border-bottom-left-radius: $borderRadius;
-  border-bottom-right-radius: $borderRadius;
-}
-
-.news__headline {
-  padding: $paddingXS 0;
-}
-
-.news__link {
-  @include links($newsLink, $newsLink, $newsLinkHover, $newsLinkActive);
+  &__link {
+    @include links($newsLink, $newsLink, $newsLinkHover, $newsLinkActive);
+  }
 }
 

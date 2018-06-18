@@ -10,17 +10,17 @@
   text-align: center;
   min-width: 60px;
   position: relative;
-}
 
-.btn--close {
-  color: lighten($modalBgPrimary, 50%);
-  font-size: 30px;
-  text-decoration: none;
-  position: absolute;
-  right: 5px;
-  top: 0;
+  &--close {
+    color: lighten($modalBgPrimary, 50%);
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
 
-  &:hover {
-    color: $modalBgPrimary;
+    &:hover {
+      color: $modalBgPrimary;
+    }
   }
 }

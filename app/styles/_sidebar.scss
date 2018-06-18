@@ -2,43 +2,72 @@
   position: absolute;
   width: 220px;
   color: $white;
-}
 
-.sidebar__title {
-  font-size: $mediumFont;
-  line-height: 50px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  color: $sideBarText;
-  border-bottom: 1px solid $sideBarBorder;
-  background: $sideBarBg;
-}
+  /* this won't nest the element and modifier classes
+    you can use
+  .block {
+    @at-root #{&}__element {
+    }
+    @at-root #{&}--modifier {
+    }
 
-.sidebar__nav {
-  margin: 0;
-  padding: 0;
-}
+    or simply...
 
-.sidebar__nav-item {
-  display: block;
-  padding: $paddingM 0 $paddingM $paddingL;
-  font-size: $smallFont;
-  font-weight: 400;
-  color: $sideBarText;
-  border-bottom: 1px solid $sideBarBorder;
+    &__element
 
-  // we could remove this... but keep it as a default?
-  &:hover {
-    box-shadow: inset 5px 0 0 $sideBarHoverOne, inset 6px 0 0 $sideBarBorder;
-    background: $sideBarHoverBackground;
+    &--modifier
   }
 
-  @each $color in $sideBarHoverList {
-    $i: index($sideBarHoverList, $color);
+   */
 
-    &:nth-child(#{$i}):hover {
-      box-shadow: inset 5px 0 0 $color, inset 6px 0 0 $sideBarBorder;
+  &__title {
+    font-size: $mediumFont;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: $sideBarText;
+    border-bottom: 1px solid $sideBarBorder;
+    background: $sideBarBg;
+  }
+
+  &__title {
+    font-size: $mediumFont;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: $sideBarText;
+    border-bottom: 1px solid $sideBarBorder;
+    background: $sideBarBg;
+  }
+
+  &__nav {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__nav-item {
+    display: block;
+    padding: $paddingM 0 $paddingM $paddingL;
+    font-size: $smallFont;
+    font-weight: 400;
+    color: $sideBarText;
+    border-bottom: 1px solid $sideBarBorder;
+
+    // we could remove this... but keep it as a default?
+    &:hover {
+      box-shadow: inset 5px 0 0 $sideBarHoverOne, inset 6px 0 0 $sideBarBorder;
+      background: $sideBarHoverBackground;
+    }
+
+    @each $color in $sideBarHoverList {
+      $i: index($sideBarHoverList, $color);
+
+      &:nth-child(#{$i}):hover {
+        box-shadow: inset 5px 0 0 $color, inset 6px 0 0 $sideBarBorder;
+      }
     }
   }
+
 }

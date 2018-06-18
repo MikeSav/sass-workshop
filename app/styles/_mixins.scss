@@ -75,7 +75,7 @@
     transform: translate($startPosX, $startPosY);
     transition: transform 0.3s ease-out;
 
-    .modal-dialog__header {
+    &__header {
       border-bottom: 1px solid $modalBorder;
       padding: $paddingS $paddingM;
       font-size: 20px;
@@ -85,13 +85,13 @@
       color: $modalHeaderColor;
     }
 
-    .modal-dialog__body {
+    &__body {
       padding: $paddingM;
       font-size: $mediumFont;
       font-weight: 400;
     }
 
-    .modal-dialog__footer {
+    &__footer {
       border-top: 1px solid $modalBorder;
       padding: $paddingS $paddingM;
       text-align: right;
