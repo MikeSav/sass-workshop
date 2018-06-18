@@ -31,6 +31,7 @@ By using &#{&}, we can chain the parent class with itself.
       padding: $paddingS;
     }
   }
+
   // so due to &#{&} this is actually nested as .dashboard .dashboard__item-content {
   &#{&}__item-content {
     height: 200px;
