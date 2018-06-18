@@ -3,22 +3,13 @@
   width: 220px;
   color: $white;
 
-  /* this won't nest the element and modifier classes
-    you can use
-  .block {
-    @at-root #{&}__element {
-    }
-    @at-root #{&}--modifier {
-    }
+  /* Note that in the returned CSS the classes are not nested,
+    if we actually want to nest we use the following
 
-    or simply...
+    &#{&} {  }
 
-    &__element
-
-    &--modifier
-  }
-
-   */
+  By using &#{&} or & #{&} or & &, we can chain the parent class with itself.
+  */
 
   &__title {
     font-size: $mediumFont;
