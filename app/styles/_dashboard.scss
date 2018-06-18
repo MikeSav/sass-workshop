@@ -1,9 +1,11 @@
-/* In this example we see how to use BEM and Sass with nesting (the code is a little nicer) */
+/* In this example we see how to use BEM and Sass with nesting (the code is a little nicer)
 
-/*
-Note that in the returned CSS the classes are not nested  - if we actually want to nest we use the following
+Note that in the returned CSS the classes are not nested,
+if we actually want to nest we use the following
+
   &#{&} {  }
-By using &#{&}, we can chain the parent class with itself.
+
+By using &#{&} or & #{&}, we can chain the parent class with itself.
 */
 
 .dashboard {
@@ -32,8 +34,8 @@ By using &#{&}, we can chain the parent class with itself.
     }
   }
 
-  // so due to &#{&} this is actually nested as .dashboard .dashboard__item-content {
-  &#{&}__item-content {
+  // so due to & #{&} this is actually nested as .dashboard .dashboard__item-content {
+  & #{&}__item-content {
     height: 200px;
     display: flex;
     align-items: center;
