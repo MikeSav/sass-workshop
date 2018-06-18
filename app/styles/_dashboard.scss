@@ -35,6 +35,7 @@ By using &#{&} or & #{&}, we can chain the parent class with itself.
   }
 
   // so due to & #{&} this is actually nested as .dashboard .dashboard__item-content {
+  // you could actually just use & &__item-content
   & #{&}__item-content {
     height: 200px;
     display: flex;
