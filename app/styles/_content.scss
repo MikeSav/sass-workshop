@@ -6,7 +6,7 @@
   transform: translate3d(220px, 0, 0);
   transition: transform .3s;
 
-  &.content--closed {
+  &.&--closed {
     transform: translate3d(0, 0, 0);
   }
 
